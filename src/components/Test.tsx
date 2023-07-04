@@ -32,7 +32,7 @@ function Test({ number, setScreen, level }: TestProps): JSX.Element {
           }
         }}
       >
-        Next
+        Submit
       </button>
     </div>
   );

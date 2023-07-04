@@ -5,6 +5,7 @@ import Memorize from "./components/Memorize";
 import Test from "./components/Test";
 import Correct from "./components/Correct";
 import Incorrect from "./components/Incorrect";
+import "./styles.css";
 
 function App(): JSX.Element {
   const [screen, setScreen] = useState("start");
@@ -13,7 +14,11 @@ function App(): JSX.Element {
 
   return (
     <>
-      <PageHeader />
+      <PageHeader
+        setScreen={setScreen}
+        setLevel={setLevel}
+        setNumber={setNumber}
+      />
       {screen === "start" && (
         <Start setScreen={setScreen} number={number} setNumber={setNumber} />
       )}

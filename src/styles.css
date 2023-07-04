@@ -1,0 +1,65 @@
+* {
+  background: #1f2421;
+  color: #dce1de;
+  font-family: "Open Sans", sans-serif;
+}
+
+/*
+font-family: 'Chonburi', cursive;
+font-family: 'Open Sans', sans-serif;
+*/
+
+header {
+  font-family: "Chonburi", cursive;
+  text-align: center;
+  margin-bottom: 10vh;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+button {
+  display: block;
+  background-color: #49a078;
+  color: #dce1de;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1vh;
+  border-radius: 0.5rem;
+  border: 0;
+  width: 10vw;
+  margin: auto;
+}
+
+.number {
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 1vh;
+}
+
+input,
+input:active {
+  display: block;
+  margin: auto;
+  border: 0;
+  border-bottom: 0.5vh solid #dce1de;
+  width: 60vw;
+  font-size: 4rem;
+  font-weight: 600;
+  text-align: center;
+  height: 4rem;
+  margin-bottom: 2vh;
+  outline: none;
+}
+
+.correct-answer {
+  text-align: center;
+  font-size: 2rem;
+}
+
+h1:hover {
+  cursor: pointer;
+}

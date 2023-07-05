@@ -8,7 +8,7 @@ function HiddenInput({ f }: HiddenInputProps): JSX.Element {
   };
   return (
     <>
-      {isMobileDevice() && (
+      {!isMobileDevice() && (
         <input
           className="hidden"
           autoFocus

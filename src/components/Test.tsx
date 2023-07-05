@@ -13,27 +13,33 @@ function Test({ number, setScreen, level }: TestProps): JSX.Element {
     return inpVal === number;
   }
 
+  function handleButtonClicked() {
+    if (isCorrect(inpVal, number)) {
+      setScreen("correct");
+    } else {
+      setScreen("incorrect");
+    }
+  }
+
   return (
     <div className="test">
       <h2>Level {level}</h2>
       <h2>What was the number?</h2>
       <input
+        placeholder="Enter number here"
         value={inpVal}
         onChange={(event) => {
           setInpVal(event.target.value);
         }}
-      />
-      <button
-        onClick={() => {
-          if (isCorrect(inpVal, number)) {
-            setScreen("correct");
-          } else {
-            setScreen("incorrect");
+        autoFocus
+        inputMode="numeric"
+        onKeyDown={(event) => {
+          if (event.key === "Enter") {
+            handleButtonClicked();
           }
         }}
-      >
-        Submit
-      </button>
+      />
+      <button onClick={handleButtonClicked}>Submit</button>
     </div>
   );
 }

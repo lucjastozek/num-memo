@@ -29,10 +29,9 @@ button {
   color: #dce1de;
   font-size: 2rem;
   font-weight: 600;
-  padding: 1vh;
+  padding: 1vh 3vw;
   border-radius: 0.5rem;
   border: 0;
-  width: 10vw;
   margin: auto;
 }
 

@@ -3,16 +3,23 @@ interface HiddenInputProps {
 }
 
 function HiddenInput({ f }: HiddenInputProps): JSX.Element {
+  const isMobileDevice = () => {
+    return /Mobi|Android/i.test(navigator.userAgent);
+  };
   return (
-    <input
-      className="hidden"
-      autoFocus
-      onKeyDown={(event) => {
-        if (event.key === "Enter") {
-          f();
-        }
-      }}
-    ></input>
+    <>
+      {isMobileDevice() && (
+        <input
+          className="hidden"
+          autoFocus
+          onKeyDown={(event) => {
+            if (event.key === "Enter") {
+              f();
+            }
+          }}
+        ></input>
+      )}
+    </>
   );
 }
 

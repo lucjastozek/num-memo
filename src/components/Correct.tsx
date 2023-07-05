@@ -20,11 +20,13 @@ function Correct({
     setNumber(addDigit(number));
     setScreen("memorize");
   }
+
   return (
     <div className="correct">
       <h2>Level {level}</h2>
       <h2>That's correct! Click to go to the next level!</h2>
       <button onClick={handleButtonClicked}>Next</button>
+
       <HiddenInput f={handleButtonClicked} />
     </div>
   );

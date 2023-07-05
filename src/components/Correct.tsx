@@ -1,4 +1,5 @@
 import addDigit from "../utils/addDigit";
+import HiddenInput from "./HiddenInput";
 
 interface CorrectProps {
   setScreen: React.Dispatch<React.SetStateAction<string>>;
@@ -14,19 +15,17 @@ function Correct({
   level,
   setLevel,
 }: CorrectProps): JSX.Element {
+  function handleButtonClicked() {
+    setLevel(level + 1);
+    setNumber(addDigit(number));
+    setScreen("memorize");
+  }
   return (
     <div className="correct">
       <h2>Level {level}</h2>
       <h2>That's correct! Click to go to the next level!</h2>
-      <button
-        onClick={() => {
-          setLevel(level + 1);
-          setNumber(addDigit(number));
-          setScreen("memorize");
-        }}
-      >
-        Next
-      </button>
+      <button onClick={handleButtonClicked}>Next</button>
+      <HiddenInput f={handleButtonClicked} />
     </div>
   );
 }

@@ -67,3 +67,7 @@ input:active {
 h1:hover {
   cursor: pointer;
 }
+
+.hidden {
+  opacity: 0;
+}
